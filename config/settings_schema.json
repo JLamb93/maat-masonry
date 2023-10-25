@@ -116,6 +116,34 @@
         "info": "t:settings_schema.typography.settings.type_header_font.info"
       },
       {
+        "type": "select",
+        "id": "custom_header_font",
+        "label": "Custom Font",
+        "options": [
+          {
+            "value": "horusbold",
+            "label": "Horus - Bold"
+          },
+          {
+            "value": "horusregular",
+            "label": "Horus - Regular"
+          },
+          {
+            "value": "horusmedium",
+            "label": "Horus - Medium"
+          },
+          {
+            "value": "horuslight",
+            "label": "Horus - Light"
+          },
+          {
+            "value": "none",
+            "label": "Font Picker"
+          }
+        ],
+        "default": "horusbold"
+      },
+      {
         "type": "range",
         "id": "heading_scale",
         "min": 100,

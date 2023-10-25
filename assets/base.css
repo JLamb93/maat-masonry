@@ -5,6 +5,116 @@
   --alpha-badge-border: 0.1;
 }
 
+/* Fonts */
+
+@font-face {
+  font-family: 'horusbold_condensed';
+  src: url('horus-bold_condensed-webfont.woff2') format('woff2'),
+       url('horus-bold_condensed-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'horusbold_extended';
+  src: url('horus-bold_extended-webfont.woff2') format('woff2'),
+       url('horus-bold_extended-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'horusregular';
+  src: url('horus-bold_italic-webfont.woff2') format('woff2'),
+       url('horus-bold_italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'horusbold';
+  src: url('horus-bold-webfont.woff2') format('woff2'),
+       url('horus-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'horuslight_condensed';
+  src: url('horus-light_condensed-webfont.woff2') format('woff2'),
+       url('horus-light_condensed-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'horuslight_extended';
+  src: url('horus-light_extended-webfont.woff2') format('woff2'),
+       url('horus-light_extended-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'horuslight_italic';
+  src: url('horus-light_italic-webfont.woff2') format('woff2'),
+       url('horus-light_italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'horuslight';
+  src: url('horus-light-webfont.woff2') format('woff2'),
+       url('horus-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'horusmedium_condensed';
+  src: url('horus-medium_condensed-webfont.woff2') format('woff2'),
+       url('horus-medium_condensed-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'horusmedium_extended';
+  src: url('horus-medium_extended-webfont.woff2') format('woff2'),
+       url('horus-medium_extended-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'horusmedium_italic';
+  src: url('horus-medium_italic-webfont.woff2') format('woff2'),
+       url('horus-medium_italic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'horusmedium';
+  src: url('horus-medium-webfont.woff2') format('woff2'),
+       url('horus-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 .product-card-wrapper .card,
 .contains-card--product {
   --border-radius: var(--product-card-corner-radius);
@@ -491,7 +601,23 @@ h5:empty,
 h6:empty {
   display: none;
 }
+.swiper-wrapper{
+  max-height: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  width:100vw;
 
+}
+.banner swiper-carousel{
+  position:absolute;
+  width:100%;
+  height:100%;
+}
+.banner .swiper-slide, .banner .slider__media{
+  height:100%;
+}
 .link,
 .customer a {
   cursor: pointer;
@@ -1184,11 +1310,17 @@ deferred-media {
 
 /* component-button */
 /* Button - default */
+.button{
+  padding:10px 15px;
+}
 
 .button--secondary,
 .button--tertiary {
   --color-button: var(--color-secondary-button);
   --color-button-text: var(--color-secondary-button-text);
+}
+.button--secondary{
+
 }
 
 .button--tertiary {
@@ -1210,6 +1342,9 @@ button.shopify-payment-button__button--unbranded,
   --shadow-visible: var(--buttons-shadow-visible);
   --border-offset: var(--buttons-border-offset); /* reduce radius edge artifacts */
   --border-opacity: calc(1 - var(--buttons-border-opacity));
+  border-color: var(--color-primary-button);
+  border-width: 1px;
+  border-style: solid;
   border-radius: var(--buttons-radius-outset);
   position: relative;
 }
@@ -1237,8 +1372,7 @@ button.shopify-payment-button__button--unbranded {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  border: 0;
-  padding: 0 3rem;
+  padding: 10px 15px;
   cursor: pointer;
   font: inherit;
   font-size: 1.5rem;
@@ -2501,7 +2635,15 @@ product-info .loading-overlay:not(.hidden) ~ *,
   }
 
   .header--mobile-left {
-    grid-template-columns: auto 2fr 1fr;
+    grid-template-areas: 'heading icons navigation';
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+  .header--mobile-left .banner__buttons{
+    grid-area: icons;
+    justify-content: flex-end;
+  }
+  .header--mobile-left header-drawer{
+    justify-self: end;
   }
 }
 
@@ -2613,6 +2755,9 @@ menu-drawer + .header__search {
 
 .header--top-center header-drawer {
   grid-area: left-icons;
+}
+.header--mobile-left header-drawer {
+  grid-area: navigation;
 }
 
 .header:not(.header--has-menu) * > .header__search {
