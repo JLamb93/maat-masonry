@@ -147,8 +147,9 @@
     flex-wrap: wrap;
   }
 
-  .banner--stacked {
+  .banner--stacked, .banner__content, .banner__box {
     height: auto;
+    min-height:400px;
   }
 
   .banner--stacked .banner__media {

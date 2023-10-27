@@ -6,7 +6,15 @@
   width: 100%;
   position: relative;
 }
-
+.newsletter-form__field-wrapper .field__input, .color-accent-1 input, .color-accent-1 textarea{
+  background: transparent;
+    border: 1px solid white;
+    padding: 10px;
+}
+.field__label{
+  padding: 10px;
+  margin-left: 25px
+}
 @media screen and (min-width: 750px) {
   .newsletter-form {
     align-items: flex-start;
@@ -21,6 +29,7 @@
 
 .newsletter-form__field-wrapper .field__input {
   padding-right: 5rem;
+
 }
 
 .newsletter-form__field-wrapper .field {

@@ -8,7 +8,7 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "Get a FREE quote when requesting a service online.",
             "link": ""
           }
         }
@@ -17,7 +17,7 @@
         "announcement-bar-0"
       ],
       "settings": {
-        "color_scheme": "accent-1",
+        "color_scheme": "inverse",
         "show_line_separator": true,
         "show_social": false,
         "auto_rotate": false,
@@ -45,7 +45,7 @@
         "47dc0123-9e4d-4d28-b339-54d7279e44c3"
       ],
       "settings": {
-        "logo_position": "top-center",
+        "logo_position": "middle-left",
         "menu": "main-menu",
         "menu_type_desktop": "mega",
         "sticky_header_type": "on-scroll-up",
