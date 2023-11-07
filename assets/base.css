@@ -602,26 +602,44 @@ h5:empty,
 h6:empty {
   display: none;
 }
-ul {
+:not(nav) > ul{
   columns: 2;
   -webkit-columns: 2;
   -moz-columns: 2;
   padding:0!important;
 }
-ul li{
+:not(nav) > ul li{
   display:flex;
   justify-content: space-between;
   flex-wrap: wrap;
   text-align: left;
   align-items: flex-start;
   margin-bottom:25px;
+  transition: .5s ease-in-out all;
 }
-li:after {
+:not(nav) > ul li:after{
   content: "→";
   padding-right: 5px;
+  position: absolute;
+  float: left;
+  transition: .5s ease-in-out all;
 }
-ul li h5{
-  margin:0px!important;
+:not(nav) > ul li:hover{
+  margin-left:25px;
+  transition: .5s ease-in-out all;
+}
+:not(nav) > ul li:hover:after{
+  transform:scale(1.25);
+  transition: .5s ease-in-out all;
+}
+:not(nav) > ul li a{
+  text-decoration: none;
+}
+:not(nav) > ul li:hover a{
+  text-decoration: underline;
+}
+:not(nav) > ul li h5{
+  margin:0 0 0 25px!important;
 }
 .swiper-wrapper{
   max-height: 100%;

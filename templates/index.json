@@ -1,5 +1,56 @@
 {
   "sections": {
+    "4cdbfe6f-8d5e-415c-8ec5-362a1d1671b3": {
+      "type": "rich-text",
+      "blocks": {
+        "93866888-0826-47ba-a137-427f0c3590f2": {
+          "type": "caption",
+          "settings": {
+            "caption": "Ma'at Masonry Seattle",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "template--21413851201833__4cdbfe6f-8d5e-415c-8ec5-362a1d1671b3-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "MODERN MASONRY",
+            "heading_size": "h1"
+          }
+        },
+        "template--21413851201833__4cdbfe6f-8d5e-415c-8ec5-362a1d1671b3-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        },
+        "template--21413851201833__4cdbfe6f-8d5e-415c-8ec5-362a1d1671b3-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "93866888-0826-47ba-a137-427f0c3590f2",
+        "template--21413851201833__4cdbfe6f-8d5e-415c-8ec5-362a1d1671b3-heading-1",
+        "template--21413851201833__4cdbfe6f-8d5e-415c-8ec5-362a1d1671b3-text-1",
+        "template--21413851201833__4cdbfe6f-8d5e-415c-8ec5-362a1d1671b3-button-1"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "accent-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -34,13 +85,14 @@
         "d7dbebc9-5101-42ac-b1da-3a6cb7c834e8",
         "button"
       ],
+      "disabled": true,
       "settings": {
         "image_overlay_opacity": 100,
         "image_height": "large",
         "desktop_content_position": "middle-left",
         "show_text_box": false,
         "desktop_content_alignment": "left",
-        "color_scheme": "accent-1",
+        "color_scheme": "inverse",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
         "stack_images_on_mobile": false,
@@ -85,7 +137,7 @@
         "image": "shopify:\/\/shop_images\/AdobeStock_56261972_Preview.jpg",
         "image_2": "shopify:\/\/shop_images\/AdobeStock_56261972_Preview.jpg",
         "image_overlay_opacity": 0,
-        "image_height": "large",
+        "image_height": "small",
         "desktop_content_position": "middle-center",
         "show_text_box": true,
         "desktop_content_alignment": "left",
@@ -131,7 +183,7 @@
         "image": "shopify:\/\/shop_images\/maat-1.png",
         "height": "medium",
         "desktop_image_width": "medium",
-        "layout": "image_first",
+        "layout": "text_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
@@ -184,7 +236,7 @@
         "template--21331398918441__928abd77-6a89-43a0-b17c-a15dcc163862-text-1": {
           "type": "text",
           "settings": {
-            "text": "<ul><li><h5>Retaining Walls<\/h5><\/li><li><h5>Pavers<\/h5><\/li><li><h5>Stone<\/h5><\/li><li><h5>Brick<\/h5><\/li><li><h5>Concrete<\/h5><\/li><li><h5>Steps<\/h5><\/li><li><h5>Fountains<\/h5><\/li><\/ul><p><\/p>"
+            "text": "<ul><li><h5><a href=\"#ContactForm\" title=\"#ContactForm\">Retaining Walls<\/a><\/h5><\/li><li><h5><a href=\"#ContactForm\" title=\"#ContactForm\">Pavers<\/a><\/h5><\/li><li><h5><a href=\"#ContactForm\" title=\"#ContactForm\">Stone<\/a><\/h5><\/li><li><h5><a href=\"#ContactForm\" title=\"#ContactForm\">Brick<\/a><\/h5><\/li><li><h5><a href=\"#ContactForm\" title=\"#ContactForm\">Concrete<\/a><\/h5><\/li><li><h5><a href=\"#ContactForm\" title=\"#ContactForm\">Steps<\/a><\/h5><\/li><li><h5><a href=\"#ContactForm\" title=\"#ContactForm\">Fountains<\/a><\/h5><\/li><\/ul><p><\/p>"
           }
         },
         "template--21331398918441__928abd77-6a89-43a0-b17c-a15dcc163862-button-1": {
@@ -254,7 +306,7 @@
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
         "color_scheme": "accent-1",
-        "image_behavior": "none",
+        "image_behavior": "zoom-in",
         "mobile_content_alignment": "left",
         "padding_top": 52,
         "padding_bottom": 52
@@ -317,8 +369,8 @@
         "open_first_collapsible_row": false,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "638973b6-6ed5-4f21-bba8-5de8d605c1da": {
@@ -330,9 +382,86 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "bcab121a-1174-4be5-8454-7d7979c6e2aa": {
+      "type": "rich-text",
+      "blocks": {
+        "template--21413851201833__bcab121a-1174-4be5-8454-7d7979c6e2aa-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "About Us",
+            "heading_size": "h1"
+          }
+        },
+        "template--21413851201833__bcab121a-1174-4be5-8454-7d7979c6e2aa-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Lorem ipsum dolor sit amet, consectetur <br\/>adipiscing elit, sed do eiusmod tempor i<br\/>ncididunt ut labore et dolore magna aliqua.<\/p><p><\/p><p>p. <a href=\"tel:+1.555.234.2345\" title=\"tel:+1.555.234.2345\">+1.555.234.2345<br\/><\/a>e. <a href=\"mailto:info@maatmasonry.com\" title=\"mailto:info@maatmasonry.com\">info@maatmasonry.com<\/a><br\/><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--21413851201833__bcab121a-1174-4be5-8454-7d7979c6e2aa-heading-1",
+        "template--21413851201833__bcab121a-1174-4be5-8454-7d7979c6e2aa-text-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "accent-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "8fd5103c-315d-4849-94b3-b32dc33696e5": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--21413851201833__8fd5103c-315d-4849-94b3-b32dc33696e5-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Proudly Serving the Greater Seattle Metropolitan Area",
+            "heading_size": "h2"
+          }
+        },
+        "template--21413851201833__8fd5103c-315d-4849-94b3-b32dc33696e5-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ma'at Masonry proudly serves the Greater Seattle, WA area. Our commitment to excellence knows no boundaries within this region. Whether you're in Seattle, Bellevue, Tacoma, or any surrounding communities, we're here to bring Ma'at's balance to your masonry needs.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "template--21413851201833__8fd5103c-315d-4849-94b3-b32dc33696e5-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--21413851201833__8fd5103c-315d-4849-94b3-b32dc33696e5-heading-1",
+        "template--21413851201833__8fd5103c-315d-4849-94b3-b32dc33696e5-text-1",
+        "template--21413851201833__8fd5103c-315d-4849-94b3-b32dc33696e5-button-1"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Screenshot_2023-11-06_at_10.10.39_AM.png",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "accent-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
+    "4cdbfe6f-8d5e-415c-8ec5-362a1d1671b3",
     "image_banner",
     "cd0dfe44-8ba2-4441-8fea-13dab3dd71d7",
     "ff1f791b-ff43-4c64-a3c3-dfe570becb76",
@@ -340,6 +469,8 @@
     "928abd77-6a89-43a0-b17c-a15dcc163862",
     "e2e4269b-4520-4fa6-a166-1bf72e86ae7d",
     "14cf3e7a-45fd-4bc1-b3fd-4523b3df79b0",
-    "638973b6-6ed5-4f21-bba8-5de8d605c1da"
+    "638973b6-6ed5-4f21-bba8-5de8d605c1da",
+    "bcab121a-1174-4be5-8454-7d7979c6e2aa",
+    "8fd5103c-315d-4849-94b3-b32dc33696e5"
   ]
 }

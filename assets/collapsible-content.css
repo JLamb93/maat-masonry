@@ -49,6 +49,10 @@
   padding-right: 1.5rem;
   padding-left: 1.5rem;
   max-width: 73.4rem;
+  padding:4rem calc(4rem / var(--font-body-scale)) 5rem;
+}
+.contact.page-width--narrow{
+  padding:4rem calc(4rem / var(--font-body-scale)) 5rem;
 }
 
 .collapsible-content__header {

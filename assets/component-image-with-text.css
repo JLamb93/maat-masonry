@@ -7,14 +7,24 @@
 }
 
 @media screen and (min-width: 750px) {
+  .image-with-text__grid{
+    display:flex;
+    flex-direction: row;
+  }
   .image-with-text__grid--reverse {
     flex-direction: row-reverse;
+  }
+  
+  .image-with-text__grid .grid__item{
+    width:50%;
+    max-width: 50%;
   }
 }
 
 .image-with-text__media {
   min-height: 100%;
   overflow: visible;
+  background-color: transparent;
 }
 
 .image-with-text__media--small {
