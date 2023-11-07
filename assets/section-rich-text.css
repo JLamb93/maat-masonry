@@ -6,6 +6,7 @@
   display: flex;
   justify-content: center;
   width: calc(100% - 4rem / var(--font-body-scale));
+  padding:4rem calc(4rem / var(--font-body-scale)) 5rem;
 }
 
 .rich-text:not(.rich-text--full-width) .rich-text__wrapper {
