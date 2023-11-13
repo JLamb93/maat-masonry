@@ -1,0 +1,507 @@
+.before-after-slider .grid {
+  margin-bottom: 0;
+}
+
+.before-after-slider .grid__item {
+  position: relative;
+}
+
+@media screen and (min-width: 750px) {
+  .before-after-slider__grid{
+    display:flex;
+    flex-direction: row;
+  }
+  .before-after-slider__grid--reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .before-after-slider__grid .grid__item{
+    width:50%;
+    max-width: 50%;
+  }
+}
+
+.before-after-slider__media {
+  min-height: 100%;
+  overflow: visible;
+  background-color: transparent;
+}
+
+.before-after-slider__media--small {
+  height: 19.4rem;
+}
+
+.before-after-slider__media--medium {
+  height: 29.6rem;
+}
+
+.before-after-slider__media--large {
+  height: 43.5rem;
+}
+
+@media screen and (min-width: 750px) {
+  .before-after-slider__media--small {
+    height: 31.4rem;
+  }
+
+  .before-after-slider__media--medium {
+    height: 46rem;
+  }
+
+  .before-after-slider__media--large {
+    height: 69.5rem;
+  }
+}
+
+.before-after-slider__media--placeholder {
+  position: relative;
+  overflow: hidden;
+}
+
+.before-after-slider__media--placeholder:after {
+  content: '';
+  position: absolute;
+  background: rgba(var(--color-foreground), 0.04);
+}
+
+.before-after-slider__media--placeholder.before-after-slider__media--adapt {
+  height: 20rem;
+}
+
+@media screen and (min-width: 750px) {
+  .before-after-slider__media--placeholder.before-after-slider__media--adapt {
+    height: 30rem;
+  }
+}
+
+.before-after-slider__media--placeholder > svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
+.before-after-slider__media--placeholder:is(.animate--ambient, .animate--zoom-in) > svg {
+  top: 0;
+  left: 0;
+  transform: translate(0);
+}
+
+.before-after-slider__content {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-self: center;
+  padding: 4rem calc(4rem / var(--font-body-scale)) 5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.before-after-slider .grid__item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.before-after-slider:not(.before-after-slider--overlap) .before-after-slider__media-item:after {
+  border-radius: var(--media-radius);
+  box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius)
+    rgba(var(--color-shadow), var(--media-shadow-opacity));
+}
+
+.before-after-slider:not(.before-after-slider--overlap) .before-after-slider__text-item:after {
+  border-radius: var(--text-boxes-radius);
+  box-shadow: var(--text-boxes-shadow-horizontal-offset) var(--text-boxes-shadow-vertical-offset)
+    var(--text-boxes-shadow-blur-radius) rgba(var(--color-shadow), var(--text-boxes-shadow-opacity));
+}
+
+.before-after-slider .before-after-slider__media-item > * {
+  border-radius: var(--media-radius);
+  overflow: hidden;
+  box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius)
+    rgba(var(--color-shadow), var(--media-shadow-opacity));
+}
+
+.before-after-slider .global-media-settings {
+  overflow: hidden !important;
+}
+
+.before-after-slider .before-after-slider__text-item > * {
+  border-radius: var(--text-boxes-radius);
+  overflow: hidden;
+  box-shadow: var(--text-boxes-shadow-horizontal-offset) var(--text-boxes-shadow-vertical-offset)
+    var(--text-boxes-shadow-blur-radius) rgba(var(--color-shadow), var(--text-boxes-shadow-opacity));
+}
+
+.before-after-slider:not(.before-after-slider--overlap) .before-after-slider__media-item > *,
+.before-after-slider:not(.before-after-slider--overlap) .before-after-slider__text-item > * {
+  box-shadow: none;
+}
+
+@media screen and (max-width: 749px) {
+  .before-after-slider{
+    padding:0px!important;
+  }
+  .before-after-slider.collapse-corners:not(.before-after-slider--overlap) .before-after-slider__media-item:after,
+  .before-after-slider.collapse-corners:not(.before-after-slider--overlap) .grid__item .before-after-slider__media,
+  .before-after-slider.collapse-corners:not(.before-after-slider--overlap) .before-after-slider__media img,
+  .before-after-slider.collapse-corners:not(.before-after-slider--overlap) .before-after-slider__media .placeholder-svg {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .before-after-slider.collapse-corners:not(.before-after-slider--overlap) .before-after-slider__text-item:after,
+  .before-after-slider.collapse-corners:not(.before-after-slider--overlap) .grid__item .before-after-slider__content {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .before-after-slider.collapse-borders:not(.before-after-slider--overlap) .before-after-slider__content {
+    border-top: 0;
+  }
+}
+
+.before-after-slider__content--mobile-right > * {
+  align-self: flex-end;
+  text-align: right;
+}
+
+.before-after-slider__content--mobile-center > * {
+  align-self: center;
+  text-align: center;
+}
+
+.before-after-slider--overlap .before-after-slider__content {
+  width: 90%;
+  margin: -3rem auto 0;
+}
+
+@media screen and (min-width: 750px) {
+  .before-after-slider__grid--reverse .before-after-slider__content {
+    margin-left: auto;
+  }
+
+  .before-after-slider__content--bottom {
+    justify-content: flex-end;
+    align-self: flex-end;
+  }
+
+  .before-after-slider__content--top {
+    justify-content: flex-start;
+    align-self: flex-start;
+  }
+
+  .before-after-slider__content--desktop-right > * {
+    align-self: flex-end;
+    text-align: right;
+  }
+
+  .before-after-slider__content--desktop-left > * {
+    align-self: flex-start;
+    text-align: left;
+  }
+
+  .before-after-slider__content--desktop-center > * {
+    align-self: center;
+    text-align: center;
+  }
+
+  .before-after-slider--overlap .before-after-slider__text-item {
+    display: flex;
+    padding: 3rem 0;
+  }
+
+  .before-after-slider--overlap .before-after-slider__content {
+    height: auto;
+    width: calc(100% + 4rem);
+    min-width: calc(100% + 4rem);
+    margin-top: 0;
+    margin-left: -4rem;
+  }
+
+  .before-after-slider--overlap .before-after-slider__grid--reverse .before-after-slider__content {
+    margin-left: 0;
+    margin-right: -4rem;
+  }
+
+  .before-after-slider--overlap .before-after-slider__grid--reverse .before-after-slider__text-item {
+    justify-content: flex-end;
+  }
+
+  .before-after-slider--overlap .before-after-slider__media-item--top {
+    align-self: flex-start;
+  }
+
+  .before-after-slider--overlap .before-after-slider__media-item--middle {
+    align-self: center;
+  }
+
+  .before-after-slider--overlap .before-after-slider__media-item--bottom {
+    align-self: flex-end;
+  }
+
+  .before-after-slider__media-item--small,
+  .before-after-slider__media-item--large + .before-after-slider__text-item {
+    flex-grow: 0;
+  }
+
+  .before-after-slider.collapse-corners:not(.before-after-slider--overlap)
+    .grid:not(.before-after-slider__grid--reverse)
+    .before-after-slider__media-item:after,
+  .before-after-slider.collapse-corners:not(.before-after-slider--overlap)
+    .grid:not(.before-after-slider__grid--reverse)
+    .before-after-slider__media,
+  .before-after-slider.collapse-corners:not(.before-after-slider--overlap)
+    .grid:not(.before-after-slider__grid--reverse)
+    .before-after-slider__media
+    img,
+  .before-after-slider.collapse-corners:not(.before-after-slider--overlap)
+    .grid:not(.before-after-slider__grid--reverse)
+    .before-after-slider__media
+    .placeholder-svg,
+  .before-after-slider.collapse-corners:not(.before-after-slider--overlap)
+    .before-after-slider__grid--reverse
+    .before-after-slider__text-item:after,
+  .before-after-slider.collapse-corners:not(.before-after-slider--overlap)
+    .before-after-slider__grid--reverse
+    .before-after-slider__content,
+  .before-after-slider.collapse-corners:not(.before-after-slider--overlap)
+    .before-after-slider__grid--reverse
+    .before-after-slider__content:after {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .before-after-slider.collapse-corners:not(.before-after-slider--overlap)
+    .grid:not(.before-after-slider__grid--reverse)
+    .before-after-slider__text-item:after,
+  .before-after-slider.collapse-corners:not(.before-after-slider--overlap)
+    .grid:not(.before-after-slider__grid--reverse)
+    .before-after-slider__content,
+  .before-after-slider.collapse-corners:not(.before-after-slider--overlap)
+    .grid:not(.before-after-slider__grid--reverse)
+    .before-after-slider__content:after,
+  .before-after-slider.collapse-corners:not(.before-after-slider--overlap)
+    .before-after-slider__grid--reverse
+    .before-after-slider__media-item:after,
+  .before-after-slider.collapse-corners:not(.before-after-slider--overlap)
+    .before-after-slider__grid--reverse
+    .before-after-slider__media,
+  .before-after-slider.collapse-corners:not(.before-after-slider--overlap)
+    .before-after-slider__grid--reverse
+    .before-after-slider__media
+    img,
+  .before-after-slider.collapse-corners:not(.before-after-slider--overlap)
+    .before-after-slider__grid--reverse
+    .before-after-slider__media
+    .placeholder-svg {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .before-after-slider.collapse-borders:not(.before-after-slider--overlap)
+    .grid:not(.before-after-slider__grid--reverse)
+    .before-after-slider__content {
+    border-left: 0;
+  }
+
+  .before-after-slider.collapse-borders:not(.before-after-slider--overlap)
+    .before-after-slider__grid--reverse
+    .before-after-slider__content {
+    border-right: 0;
+  }
+}
+
+.before-after-slider:not(.collapse-corners, .before-after-slider--overlap) .before-after-slider__media-item {
+  z-index: 2;
+}
+
+/* Needed for gradient continuity with or without animation so that transparent PNG images come up as we would expect */
+.before-after-slider:not(.before-after-slider--overlap) .color-background-1,
+.before-after-slider.before-after-slider--overlap .before-after-slider__media.color-background-1 {
+  background: transparent;
+}
+
+/* Needed for gradient continuity with or without animation, the transform scopes the gradient to its container which happens already when animation are turned on */
+.before-after-slider .gradient {
+  transform: perspective(0);
+}
+
+.before-after-slider__content {
+  border-radius: var(--text-boxes-radius);
+  box-shadow: var(--text-boxes-shadow-horizontal-offset) var(--text-boxes-shadow-vertical-offset)
+    var(--text-boxes-shadow-blur-radius) rgba(var(--color-shadow), var(--text-boxes-shadow-opacity));
+  word-break: break-word;
+}
+
+@media screen and (min-width: 990px) {
+  .before-after-slider__content {
+    padding: 6rem 7rem 7rem;
+  }
+}
+
+.before-after-slider__content > * + * {
+  margin-top: 2rem;
+}
+
+.before-after-slider__content > .before-after-slider__text:empty ~ a {
+  margin-top: 2rem;
+}
+
+.before-after-slider__content > :first-child:is(.before-after-slider__heading),
+.before-after-slider__text--caption + .before-after-slider__heading,
+.before-after-slider__text--caption:first-child {
+  margin-top: 0;
+}
+
+.before-after-slider__content :last-child:is(.before-after-slider__heading),
+.before-after-slider__text--caption {
+  margin-bottom: 0;
+}
+
+.before-after-slider__content .button + .before-after-slider__text {
+  margin-top: 2rem;
+}
+
+.before-after-slider__content .before-after-slider__text + .button {
+  margin-top: 3rem;
+}
+
+.before-after-slider__heading {
+  margin-bottom: 0;
+}
+
+.before-after-slider__text p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 749px) {
+  .collapse-padding .before-after-slider__grid .before-after-slider__content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .collapse-padding
+    .before-after-slider__grid:not(.before-after-slider__grid--reverse)
+    .before-after-slider__content:not(.before-after-slider__content--desktop-center) {
+    padding-right: 0;
+  }
+
+  .collapse-padding
+    .before-after-slider__grid--reverse
+    .before-after-slider__content:not(.before-after-slider__content--desktop-center) {
+    padding-left: 0;
+  }
+}
+
+/* check for flexbox gap in older Safari versions */
+@supports not (inset: 10px) {
+  .before-after-slider .grid {
+    margin-left: 0;
+  }
+}
+
+/*
+  Multirow
+  note: consider removing from this stylesheet if multirow-specific styles increase signficantly
+*/
+.multirow__inner {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--grid-mobile-vertical-spacing);
+}
+
+@media screen and (min-width: 750px) {
+  .multirow__inner {
+    row-gap: var(--grid-desktop-vertical-spacing);
+  }
+}
+
+#before-after-slider img {
+  width:100%;
+  display:block;
+  max-height: 400px;
+}
+
+.container {
+  width:50%;
+  display:block;
+  margin:30px auto
+}
+
+#before-after-slider {
+  width:100%;
+  position:relative;
+  overflow:hidden;
+  border:0px solid white;
+  max-width: 768px;
+  padding: 25px;
+}
+
+#after-image {
+  display:block
+}
+
+#before-image {
+  position:absolute;
+  height:100%;
+  width:50%;
+  top:0;
+  left:0;
+  overflow:hidden;
+  z-index:2;
+}
+
+#resizer {
+  position:absolute;
+  display:flex;
+  align-items:center;
+  z-index:5;
+  top:0;
+  left:50%;
+  height:100%;
+  width:4px;
+  background:white;
+  /*Stop vertical scrolling on touch*/
+  -ms-touch-action: pan-y;
+    touch-action: pan-y;
+}
+
+#resizer:after {
+  background:linear-gradient(62deg,#c93072 5%,#3365c0);
+  font-family: "Font Awesome 5 Free";
+  content:'\f337';
+  font-weight:900;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:white;
+  position:absolute;
+  margin: 0 0 0 -22px;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  border:3px solid white;
+
+}
+
+@media (max-width:767px) {
+  .container {
+    width:100%;
+    padding:0 20px
+  }
+}
+
+

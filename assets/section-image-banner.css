@@ -148,8 +148,8 @@
   }
 
   .banner--stacked, .banner__content, .banner__box {
-    height: auto;
-    min-height:400px;
+    height: fit-content;
+    min-height:200px;
   }
 
   .banner--stacked .banner__media {

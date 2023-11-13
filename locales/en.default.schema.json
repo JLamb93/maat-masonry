@@ -395,6 +395,10 @@
         "padding_top": "Top padding",
         "padding_bottom": "Bottom padding"
       },
+      "divider": {
+        "section_divider_heading": "Section divider",
+        "show_section_divider": "Show section divider?"
+      },
       "spacing": "Spacing",
       "colors": {
         "label": "Color scheme",

@@ -21,19 +21,22 @@ class Carousel extends HTMLElement {
     }
 
     init() {
-        console.log('Slider init...')
+      console.log('Slider init...')
       this.slider = new Swiper(this, {
         autoHeight: true,
         autoplay: this.dataset.autoplay || true,
         pagination: this.showPagination,
         spaceBetween: Number(this.dataset.spaceBetween) || 2,
         loop: false,
+        effect: this.dataset.effect || 'fade',
+        crossFade: true,
         slidesPerView: Number(this.dataset.slidesPerView) || 1,
         slidesPerGroup: Number(this.dataset.slidesPerScroll) || 1,
         initialSlide: Number(this.dataset.initialSlide) || 0,
         centeredSlides: !!this.dataset.centered,
         centeredSlidesBounds: !!this.dataset.centeredBounds,
         navigation: {
+          enabled: this.dataset.navEnabled || true,
           nextEl: '[data-next]',
           prevEl: '[data-prev]',
         },

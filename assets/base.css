@@ -608,7 +608,7 @@ h6:empty {
   -moz-columns: 2;
   padding:0!important;
 }
-:not(nav) > ul li{
+:not(nav) > ul:not(.list-unstyled) li{
   display:flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -617,28 +617,28 @@ h6:empty {
   margin-bottom:25px;
   transition: .5s ease-in-out all;
 }
-:not(nav) > ul li:after{
+:not(nav) > ul:not(.list-unstyled) li:after{
   content: "→";
   padding-right: 5px;
   position: absolute;
   float: left;
   transition: .5s ease-in-out all;
 }
-:not(nav) > ul li:hover{
+:not(nav) > ul:not(.list-unstyled) li:hover{
   margin-left:25px;
   transition: .5s ease-in-out all;
 }
-:not(nav) > ul li:hover:after{
+:not(nav) > ul:not(.list-unstyled) li:hover:after{
   transform:scale(1.25);
   transition: .5s ease-in-out all;
 }
-:not(nav) > ul li a{
+:not(nav) > ul:not(.list-unstyled) li a{
   text-decoration: none;
 }
-:not(nav) > ul li:hover a{
+:not(nav) > ul:not(.list-unstyled) li:hover a{
   text-decoration: underline;
 }
-:not(nav) > ul li h5{
+:not(nav) > ul:not(.list-unstyled) li h5{
   margin:0 0 0 25px!important;
 }
 .swiper-wrapper{
@@ -714,6 +714,39 @@ hr {
   background-color: rgba(var(--color-foreground), 0.2);
   display: block;
   margin: 5rem 0;
+}
+.section-divider__container{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+  left: 50px;
+  display:flex;
+}
+hr.section-divider{
+  margin: 0;
+  width: 100%;
+  top: 0;
+  background-color: white;
+  left: 25px;
+}
+.section-number{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  border:1px solid white;
+  font-family: 'horusbold_extended';
+  font-size:12px;
+  transform: translate(-10px, -50%);
+}
+.section-title{
+  color:white;
+  font-family:'horus';
+  font-size: 12px;
+
 }
 
 @media screen and (min-width: 750px) {
