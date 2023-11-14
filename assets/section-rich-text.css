@@ -8,6 +8,11 @@
   width: calc(100% - 4rem / var(--font-body-scale));
   padding:4rem calc(4rem / var(--font-body-scale)) 5rem;
 }
+@media screen and (max-width:768px){
+  .rich-text__wrapper {
+    padding:2rem calc(2rem / var(--font-body-scale)) 2rem;
+  }
+}
 
 .rich-text:not(.rich-text--full-width) .rich-text__wrapper {
   margin: auto;

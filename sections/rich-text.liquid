@@ -17,11 +17,11 @@
 <div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
   <div class="rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
     {% if section.settings.show_section_divider %}
-      <div class="section-divider__container">
-        <span class="section-number">1</span>
+      <div class="section-divider__container scroll-trigger animate--slide-in">
+        <span class="section-number">{{ section.settings.section_number }}</span>
         <div class="" style="width:calc(100% - 50px);">
           <hr class="solid section-divider">
-          <span class="section-title">Services</span>
+          <span class="section-title">{{ section.settings.section_title}}</span>
         </div>
         
       </div>
@@ -199,6 +199,16 @@
       "id": "show_section_divider",
       "default": false,
       "label": "t:sections.all.divider.show_section_divider"
+    },
+    {
+      "type": "text",
+      "id": "section_number",
+      "label": "Section number"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section title"
     }
   ],
   "blocks": [

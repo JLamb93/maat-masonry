@@ -16,17 +16,17 @@
 
 {% assign scheme1 = settings.color_schemes | first %}
 
-<div class="image-with-text image-with-text--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == scheme1 and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} gradient color-{{ section.settings.color_scheme }}">
+<div class="image-with-text image-with-text--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == scheme1 and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
   {% if section.settings.show_section_divider %}
-    <div class="section-divider__container">
-      <span class="section-number">1</span>
+    <div class="section-divider__container scroll-trigger animate--slide-in">
+      <span class="section-number">{{ section.settings.section_number }}</span>
       <div class="" style="width:calc(100% - 50px);">
         <hr class="solid section-divider">
-        <span class="section-title">Services</span>
+        <span class="section-title">{{ section.settings.section_title }}</span>
       </div>
     </div>
   {% endif %}  
-<div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}">
+<div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
     <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
       <div
         class="image-with-text__media image-with-text__media--{{ section.settings.height }} global-media-settings {% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"
@@ -318,6 +318,16 @@
       "id": "show_section_divider",
       "default": false,
       "label": "t:sections.all.divider.show_section_divider"
+    },
+    {
+      "type": "text",
+      "id": "section_number",
+      "label": "Section number"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section title"
     }
   ],
   "blocks": [

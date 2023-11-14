@@ -16,18 +16,18 @@
 
 {% assign scheme1 = settings.color_schemes | first %}
 
-<div class="page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == scheme1 and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} gradient color-{{ section.settings.color_scheme }}">
+<div class="page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == scheme1 and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
   {% if section.settings.show_section_divider %}
-    <div class="section-divider__container">
-      <span class="section-number">1</span>
+    <div class="section-divider__container scroll-trigger animate--slide-in">
+      <span class="section-number">{{ section.settings.section_number }}</span>
       <div class="" style="width:calc(100% - 50px);">
         <hr class="solid section-divider">
-        <span class="section-title">Services</span>
+        <span class="section-title">{{ section.settings.section_title }}</span>
       </div>
       
     </div>
   {% endif %}
-  <div class="container" id="before-after-slider">
+  <div class="container {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" id="before-after-slider" >
     <div id="before-image">
       {%- if section.settings.before_image != blank -%}
         {%- if section.settings.image_behavior == 'ambient' or section.settings.image_behavior == 'zoom-in' -%}
@@ -84,62 +84,31 @@
 </div>
   
 
-<div class="before-after-slder before-after-slder--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == scheme1 and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} gradient color-{{ section.settings.color_scheme }}">
-  <div class="before-after-slder__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} before-after-slder__grid--reverse{% endif %}">
-    <div class="before-after-slder__media-item before-after-slder__media-item--{{ section.settings.desktop_image_width }} before-after-slder__media-item--{{ section.settings.desktop_content_position }} grid__item">
-      <div
-        class="before-after-slder__media before-after-slder__media--{{ section.settings.height }} global-media-settings {% if section.settings.image != blank %}media{% else %}before-after-slder__media--placeholder placeholder{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}"
-        {% if section.settings.height == 'adapt' and section.settings.image != blank %}
-          style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"
-        {% endif %}
-      >
-        {%- if section.settings.image != blank -%}
-          {%- if section.settings.image_behavior == 'ambient' or section.settings.image_behavior == 'zoom-in' -%}
-            {%- assign widths = '198, 432, 642, 900, 1284, 1800' -%}
-            {%- capture sizes -%}
-              (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 1.6667 }}px,
-              (min-width: 750px) calc((100vw - 130px) / 1.667), calc((100vw - 50px) / 1.667)
-            {%- endcapture -%}
-          {%- else -%}
-            {%- assign widths = '165, 360, 535, 750, 1070, 1500' -%}
-            {%- capture sizes -%}
-              (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
-              (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
-            {%- endcapture -%}
-          {%- endif -%}
-          {{
-            section.settings.image
-            | image_url: width: 1500
-            | image_tag: loading: 'lazy', sizes: sizes, widths: widths
-          }}
-        {%- else -%}
-          {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
-        {%- endif -%}
-      </div>
-    </div>
-    <div class="before-after-slder__text-item grid__item">
+<div class="before-after-slider before-after-slider--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == scheme1 and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
+  <div class="before-after-slider__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} before-after-slider__grid--reverse{% endif %} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    <div class="before-after-slider__text-item grid__item">
       <div
         id="ImageWithText--{{ section.id }}"
-        class="before-after-slder__content before-after-slder__content--{{ section.settings.desktop_content_position }} before-after-slder__content--desktop-{{ section.settings.desktop_content_alignment }} before-after-slder__content--mobile-{{ section.settings.mobile_content_alignment }} before-after-slder__content--{{ section.settings.height }} content-container"
+        class="container before-after-slider__content before-after-slider__content--{{ section.settings.desktop_content_position }} before-after-slider__content--desktop-{{ section.settings.desktop_content_alignment }} before-after-slider__content--mobile-{{ section.settings.mobile_content_alignment }} before-after-slider__content--{{ section.settings.height }} content-container"
       >
         {%- for block in section.blocks -%}
           {% case block.type %}
             {%- when 'heading' -%}
               <h2
-                class="before-after-slder__heading inline-richtext {{ block.settings.heading_size }}"
+                class="before-after-slider__heading inline-richtext {{ block.settings.heading_size }}"
                 {{ block.shopify_attributes }}
               >
                 {{ block.settings.heading }}
               </h2>
             {%- when 'caption' -%}
               <p
-                class="before-after-slder__text before-after-slder__text--caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }} {{ block.settings.text_style }}"
+                class="before-after-slider__text before-after-slider__text--caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }} {{ block.settings.text_style }}"
                 {{ block.shopify_attributes }}
               >
                 {{ block.settings.caption | escape }}
               </p>
             {%- when 'text' -%}
-              <div class="before-after-slder__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
+              <div class="before-after-slider__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
                 {{ block.settings.text }}
               </div>
             {%- when 'button' -%}
@@ -162,6 +131,101 @@
     </div>
   </div>
 </div>
+
+{% javascript %}
+const slider = document.getElementById('before-after-slider');
+const before = document.getElementById('before-image');
+const beforeImage = before.getElementsByTagName('img')[0];
+const resizer = document.getElementById('resizer');
+
+let active = false;
+
+//Sort overflow out for Overlay Image
+document.addEventListener("DOMContentLoaded", function() {
+  let width = slider.offsetWidth;
+  console.log(width);
+  beforeImage.style.width = width + 'px';
+});
+
+//Adjust width of image on resize 
+window.addEventListener('resize', function() {
+  let width = slider.offsetWidth - 25;
+  console.log(width);
+  beforeImage.style.width = width + 'px';
+})
+
+resizer.addEventListener('mousedown',function(){
+  active = true;
+ resizer.classList.add('resize');
+
+});
+
+document.body.addEventListener('mouseup',function(){
+  active = false;
+ resizer.classList.remove('resize');
+});
+
+document.body.addEventListener('mouseleave', function() {
+  active = false;
+  resizer.classList.remove('resize');
+});
+
+document.body.addEventListener('mousemove',function(e){
+  if (!active) return;
+  let x = e.pageX;
+  x -= slider.getBoundingClientRect().left - 25;
+  slideIt(x);
+  pauseEvent(e);
+});
+
+resizer.addEventListener('touchstart',function(){
+  active = true;
+  resizer.classList.add('resize');
+});
+
+document.body.addEventListener('touchend',function(){
+  active = false;
+  resizer.classList.remove('resize');
+});
+
+document.body.addEventListener('touchcancel',function(){
+  active = false;
+  resizer.classList.remove('resize');
+});
+
+//calculation for dragging on touch devices
+document.body.addEventListener('touchmove',function(e){
+  if (!active) return;
+  let x;
+  
+  let i;
+  for (i=0; i < e.changedTouches.length; i++) {
+  x = e.changedTouches[i].pageX; 
+  }
+  
+  x -= slider.getBoundingClientRect().left;
+  slideIt(x);
+  pauseEvent(e);
+});
+
+function slideIt(x){
+    let transform = Math.max(25,(Math.min(x,slider.offsetWidth - 25)));
+    before.style.width = transform-0+"px";
+    resizer.style.left = transform+25+"px";
+    
+}
+
+//stop divs being selected.
+function pauseEvent(e){
+    if(e.stopPropagation) e.stopPropagation();
+    if(e.preventDefault) e.preventDefault();
+    e.cancelBubble=true;
+    e.returnValue=false;
+    return false;
+}
+
+
+{% endjavascript %}
 
 {% schema %}
 {
@@ -382,6 +446,16 @@
       "id": "show_section_divider",
       "default": false,
       "label": "t:sections.all.divider.show_section_divider"
+    },
+    {
+      "type": "text",
+      "id": "section_number",
+      "label": "Section number"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section title"
     }
   ],
   "blocks": [

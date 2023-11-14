@@ -42,6 +42,7 @@
         "template--21413851201833__4cdbfe6f-8d5e-415c-8ec5-362a1d1671b3-text-1",
         "template--21413851201833__4cdbfe6f-8d5e-415c-8ec5-362a1d1671b3-button-1"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "left",
         "content_alignment": "left",
@@ -49,7 +50,9 @@
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52,
-        "show_section_divider": false
+        "show_section_divider": false,
+        "section_number": "",
+        "section_title": ""
       }
     },
     "image_banner": {
@@ -143,7 +146,7 @@
         "show_text_box": true,
         "desktop_content_alignment": "left",
         "color_scheme": "accent-2",
-        "image_behavior": "zoom-in",
+        "image_behavior": "ambient",
         "mobile_content_alignment": "left",
         "stack_images_on_mobile": true,
         "show_text_below": true
@@ -191,9 +194,11 @@
         "color_scheme": "accent-1",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
-        "padding_top": 52,
-        "padding_bottom": 52,
-        "show_section_divider": false
+        "padding_top": 24,
+        "padding_bottom": 40,
+        "show_section_divider": false,
+        "section_number": "",
+        "section_title": ""
       }
     },
     "featured_collection": {
@@ -263,9 +268,11 @@
         "content_alignment": "left",
         "color_scheme": "accent-1",
         "full_width": true,
-        "padding_top": 40,
+        "padding_top": 52,
         "padding_bottom": 52,
-        "show_section_divider": true
+        "show_section_divider": true,
+        "section_number": "1",
+        "section_title": "Services"
       }
     },
     "e2e4269b-4520-4fa6-a166-1bf72e86ae7d": {
@@ -309,11 +316,13 @@
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
         "color_scheme": "accent-1",
-        "image_behavior": "zoom-in",
+        "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 52,
         "padding_bottom": 52,
-        "show_section_divider": true
+        "show_section_divider": true,
+        "section_number": "2",
+        "section_title": "Reviews"
       }
     },
     "b1646079-4359-45db-9c5b-a6497fd33b11": {
@@ -353,15 +362,17 @@
         "height": "small",
         "desktop_image_width": "medium",
         "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
         "content_layout": "no-overlap",
         "color_scheme": "accent-1",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "show_section_divider": true
+        "padding_top": 52,
+        "padding_bottom": 4,
+        "show_section_divider": true,
+        "section_number": "3",
+        "section_title": "Our Work"
       }
     },
     "14cf3e7a-45fd-4bc1-b3fd-4523b3df79b0": {
@@ -425,6 +436,56 @@
         "padding_bottom": 0
       }
     },
+    "5ee4978d-f644-468f-80e7-b4d2229851bf": {
+      "type": "image-with-text",
+      "blocks": {
+        "c78f24ce-b2dd-4560-a731-3cbeb0c44c35": {
+          "type": "heading",
+          "settings": {
+            "heading": "We Believe in Quality",
+            "heading_size": "h1"
+          }
+        },
+        "d733e3b3-694b-46b6-85ed-e380dc6fd4bb": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ma'at Masonry proudly serves the Greater Seattle, WA area. Our commitment to excellence knows no boundaries within this region. <br\/><\/p><p>Whether you're in Seattle, <br\/>Bellevue, Tacoma, or any surrounding communities, we're here to bring Ma'at's balance to your masonry needs.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "83eff19e-89eb-4416-ac15-be119d73f51c": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "c78f24ce-b2dd-4560-a731-3cbeb0c44c35",
+        "d733e3b3-694b-46b6-85ed-e380dc6fd4bb",
+        "83eff19e-89eb-4416-ac15-be119d73f51c"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/maat-1.png",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "accent-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "show_section_divider": true,
+        "section_number": "2",
+        "section_title": "Reviews"
+      }
+    },
     "638973b6-6ed5-4f21-bba8-5de8d605c1da": {
       "type": "contact-form",
       "settings": {
@@ -463,7 +524,9 @@
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 52,
-        "show_section_divider": false
+        "show_section_divider": false,
+        "section_number": "",
+        "section_title": ""
       }
     },
     "8fd5103c-315d-4849-94b3-b32dc33696e5": {
@@ -510,7 +573,9 @@
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36,
-        "show_section_divider": false
+        "show_section_divider": false,
+        "section_number": "",
+        "section_title": ""
       }
     }
   },
@@ -524,6 +589,7 @@
     "e2e4269b-4520-4fa6-a166-1bf72e86ae7d",
     "b1646079-4359-45db-9c5b-a6497fd33b11",
     "14cf3e7a-45fd-4bc1-b3fd-4523b3df79b0",
+    "5ee4978d-f644-468f-80e7-b4d2229851bf",
     "638973b6-6ed5-4f21-bba8-5de8d605c1da",
     "bcab121a-1174-4be5-8454-7d7979c6e2aa",
     "8fd5103c-315d-4849-94b3-b32dc33696e5"
