@@ -14,7 +14,7 @@
   }
 {%- endstyle -%}
 
-<div class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
+<div id="{{ section.settings.section_id}}" class="isolate{% unless section.settings.full_width %} page-width{% endunless %}">
   <div class="rich-text content-container color-{{ section.settings.color_scheme }} gradient{% if section.settings.full_width %} rich-text--full-width content-container--full-width{% endif %} section-{{ section.id }}-padding">
     {% if section.settings.show_section_divider %}
       <div class="section-divider__container scroll-trigger animate--slide-in">
@@ -209,6 +209,11 @@
       "type": "text",
       "id": "section_title",
       "label": "Section title"
+    },
+    {
+      "type": "text",
+      "id": "section_id",
+      "label": "Section ID"
     }
   ],
   "blocks": [

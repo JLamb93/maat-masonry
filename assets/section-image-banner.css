@@ -14,6 +14,9 @@
 }
 
 @media only screen and (max-width: 749px) {
+  swiper-carousel .banner__box.gradient{
+    background:black;
+  }
   .banner--content-align-mobile-right .banner__box {
     text-align: right;
   }
@@ -30,6 +33,7 @@
 
   .banner--content-align-left .banner__box {
     text-align: left;
+    background-color: transparent;
   }
 
   .banner--content-align-left.banner--desktop-transparent .banner__box,
@@ -46,7 +50,6 @@
 .banner__media.animate--zoom-in > img:not(.zoom):not(.deferred-media__poster-button),
 .banner__media.animate--zoom-in > svg:not(.zoom):not(.deferred-media__poster-button) {
   position: fixed;
-  height: 100vh;
 }
 
 @media screen and (max-width: 749px) {
@@ -273,6 +276,7 @@
   align-items: center;
   justify-content: center;
   z-index: 2;
+  margin-bottom:50px;
 }
 
 @media screen and (min-width: 750px) {
@@ -380,7 +384,7 @@
   top: 0;
   background: #000000;
   opacity: 0;
-  z-index: 1;
+  z-index: 0;
   width: 100%;
   height: 100%;
 }
@@ -392,6 +396,7 @@
 @media screen and (min-width: 750px) {
   .banner__box > * + .banner__text {
     margin-top: 2rem;
+    max-width:50%;
   }
 }
 

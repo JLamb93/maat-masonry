@@ -52,7 +52,8 @@
         "padding_bottom": 52,
         "show_section_divider": false,
         "section_number": "",
-        "section_title": ""
+        "section_title": "",
+        "section_id": ""
       }
     },
     "image_banner": {
@@ -106,47 +107,85 @@
     "cd0dfe44-8ba2-4441-8fea-13dab3dd71d7": {
       "type": "image-slider",
       "blocks": {
-        "template--21331398918441__cd0dfe44-8ba2-4441-8fea-13dab3dd71d7-heading-1": {
-          "type": "heading",
+        "slide_text_r6UPLU": {
+          "type": "slide_text",
           "settings": {
-            "heading": "Architect",
-            "heading_size": "h1"
-          }
-        },
-        "template--21331398918441__cd0dfe44-8ba2-4441-8fea-13dab3dd71d7-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "template--21331398918441__cd0dfe44-8ba2-4441-8fea-13dab3dd71d7-buttons-1": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
+            "heading": "Architect.",
+            "heading_size": "h1",
+            "text": "Welcome to Ma'at Construction – Your Premier Masonry Experts in Seattle, Washington! Unlock the beauty of timeless craftsmanship with Ma'at Construction, your go-to masonry specialists in the heart of Seattle. From stunning brickwork to impeccable stonemasonry, our team brings your architectural dreams to life.",
+            "text_style": "body",
+            "button_label_1": "Learn More",
+            "button_link_1": "#about-us",
             "button_style_secondary_1": false,
             "button_label_2": "",
+            "button_link_2": "#our-services",
+            "button_style_secondary_2": false
+          }
+        },
+        "slide_text_UGmGPr": {
+          "type": "slide_text",
+          "settings": {
+            "heading": "Elevate.",
+            "heading_size": "h1",
+            "text": "Elevate your property's aesthetics with our top-notch masonry services. Explore the perfect blend of durability and elegance that defines Seattle construction at its finest.",
+            "text_style": "body",
+            "button_label_1": "View Services",
+            "button_link_1": "#our-services",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        },
+        "slide_text_f8rJif": {
+          "type": "slide_text",
+          "settings": {
+            "heading": "Redefine.",
+            "heading_size": "h1",
+            "text": "Trust in our seasoned artisans to create custom solutions tailored to your vision. We master the art of precision, ensuring every brick and stone aligns seamlessly to achieve perfection.",
+            "text_style": "body",
+            "button_label_1": "Our Work",
+            "button_link_1": "#our-work",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        },
+        "slide_text_GeENVM": {
+          "type": "slide_text",
+          "settings": {
+            "heading": "Innovate.",
+            "heading_size": "h1",
+            "text": "Immerse yourself in the urban charm of Seattle with Ma'at Construction. We merge traditional techniques with modern flair, delivering structures that stand out in the cityscape.",
+            "text_style": "body",
+            "button_label_1": "Latest Projects",
+            "button_link_1": "#our-work",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
             "button_link_2": "",
             "button_style_secondary_2": false
           }
         }
       },
       "block_order": [
-        "template--21331398918441__cd0dfe44-8ba2-4441-8fea-13dab3dd71d7-heading-1",
-        "template--21331398918441__cd0dfe44-8ba2-4441-8fea-13dab3dd71d7-text-1",
-        "template--21331398918441__cd0dfe44-8ba2-4441-8fea-13dab3dd71d7-buttons-1"
+        "slide_text_r6UPLU",
+        "slide_text_UGmGPr",
+        "slide_text_f8rJif",
+        "slide_text_GeENVM"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Photo_Oct_15_2022_6_07_12_PM.jpg",
-        "image_2": "shopify:\/\/shop_images\/Photo_Oct_15_2022_6_05_58_PM.jpg",
+        "image": "shopify:\/\/shop_images\/maat-pavers.jpg",
+        "image_2": "shopify:\/\/shop_images\/paver.jpg",
+        "image_3": "shopify:\/\/shop_images\/maat-pavers-2.jpg",
+        "image_4": "shopify:\/\/shop_images\/maat-hero-1.jpg",
         "image_overlay_opacity": 0,
         "image_height": "small",
         "desktop_content_position": "middle-center",
         "show_text_box": true,
         "desktop_content_alignment": "left",
         "color_scheme": "accent-2",
-        "image_behavior": "ambient",
+        "image_behavior": "none",
         "mobile_content_alignment": "left",
         "stack_images_on_mobile": true,
         "show_text_below": true
@@ -158,14 +197,14 @@
         "template--21331398918441__ff1f791b-ff43-4c64-a3c3-dfe570becb76-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "We Believe in Quality",
-            "heading_size": "h1"
+            "heading": "Elevating Seattle's Masonry",
+            "heading_size": "h2"
           }
         },
         "template--21331398918441__ff1f791b-ff43-4c64-a3c3-dfe570becb76-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Welcome to Ma'at Construction, where the rich tapestry of Seattle's architectural landscape comes to life through the artistry of masonry. Nestled in the heart of Washington, we are your dedicated craftsmen, shaping the city's skyline with precision, innovation, and a commitment to enduring quality.<br\/><br\/>At Ma'at Construction, we draw inspiration from Seattle's diverse heritage. Our legacy of craftsmanship spans generations, blending traditional techniques with contemporary vision. From classic brickwork to avant-garde stonemasonry, we are the architects of timeless beauty.<\/p>",
             "text_style": "body"
           }
         },
@@ -194,11 +233,12 @@
         "color_scheme": "accent-1",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
-        "padding_top": 24,
+        "padding_top": 100,
         "padding_bottom": 40,
-        "show_section_divider": false,
-        "section_number": "",
-        "section_title": ""
+        "show_section_divider": true,
+        "section_number": "1",
+        "section_title": "About Us",
+        "section_id": "about-us"
       }
     },
     "featured_collection": {
@@ -231,23 +271,65 @@
       }
     },
     "928abd77-6a89-43a0-b17c-a15dcc163862": {
-      "type": "rich-text",
+      "type": "services",
       "blocks": {
-        "template--21331398918441__928abd77-6a89-43a0-b17c-a15dcc163862-heading-1": {
-          "type": "heading",
-          "settings": {
-            "heading": "What We Do",
-            "heading_size": "h1"
-          }
-        },
-        "template--21331398918441__928abd77-6a89-43a0-b17c-a15dcc163862-text-1": {
+        "text_FcF6fY": {
           "type": "text",
           "settings": {
-            "text": "<ul><li><h5><a href=\"#ContactForm\" title=\"#ContactForm\">Retaining Walls<\/a><\/h5><\/li><li><h5><a href=\"#ContactForm\" title=\"#ContactForm\">Pavers<\/a><\/h5><\/li><li><h5><a href=\"#ContactForm\" title=\"#ContactForm\">Stone<\/a><\/h5><\/li><li><h5><a href=\"#ContactForm\" title=\"#ContactForm\">Brick<\/a><\/h5><\/li><li><h5><a href=\"#ContactForm\" title=\"#ContactForm\">Concrete<\/a><\/h5><\/li><li><h5><a href=\"#ContactForm\" title=\"#ContactForm\">Steps<\/a><\/h5><\/li><li><h5><a href=\"#ContactForm\" title=\"#ContactForm\">Fountains<\/a><\/h5><\/li><\/ul><p><\/p>"
+            "text": "<p>Whether it's a residential renovation or a commercial endeavor, Ma'at Construction offers tailored solutions for projects of all scales. We specialize in brick restoration, stone veneer installation, and a spectrum of masonry services, ensuring your vision is brought to life with meticulous attention to detail.<br\/><br\/><\/p>"
           }
         },
-        "template--21331398918441__928abd77-6a89-43a0-b17c-a15dcc163862-button-1": {
+        "service_3q94pf": {
+          "type": "service",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Photo_Oct_15_2022_6_07_12_PM.jpg",
+            "heading": "Retaining Walls",
+            "heading_size": "h2"
+          }
+        },
+        "service_TWHikq": {
+          "type": "service",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/paver.jpg",
+            "heading": "Pavers",
+            "heading_size": "h2"
+          }
+        },
+        "service_pbzL9n": {
+          "type": "service",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/maat-steps.jpg",
+            "heading": "Steps",
+            "heading_size": "h2"
+          }
+        },
+        "service_nUU4qq": {
+          "type": "service",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/maat-tiles.jpg",
+            "heading": "Tiles",
+            "heading_size": "h2"
+          }
+        },
+        "service_DjYzHQ": {
+          "type": "service",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/maat-stone.jpg",
+            "heading": "Stone",
+            "heading_size": "h2"
+          }
+        },
+        "service_hNj79p": {
+          "type": "service",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Photo_Oct_15_2022_6_07_12_PM.jpg",
+            "heading": "Retaining Walls",
+            "heading_size": "h2"
+          }
+        },
+        "button_WkeqXq": {
           "type": "button",
+          "disabled": true,
           "settings": {
             "button_label": "Button label",
             "button_link": "",
@@ -259,70 +341,26 @@
         }
       },
       "block_order": [
-        "template--21331398918441__928abd77-6a89-43a0-b17c-a15dcc163862-heading-1",
-        "template--21331398918441__928abd77-6a89-43a0-b17c-a15dcc163862-text-1",
-        "template--21331398918441__928abd77-6a89-43a0-b17c-a15dcc163862-button-1"
+        "text_FcF6fY",
+        "service_3q94pf",
+        "service_TWHikq",
+        "service_pbzL9n",
+        "service_nUU4qq",
+        "service_DjYzHQ",
+        "service_hNj79p",
+        "button_WkeqXq"
       ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "left",
         "color_scheme": "accent-1",
         "full_width": true,
-        "padding_top": 52,
-        "padding_bottom": 52,
-        "show_section_divider": true,
-        "section_number": "1",
-        "section_title": "Services"
-      }
-    },
-    "e2e4269b-4520-4fa6-a166-1bf72e86ae7d": {
-      "type": "image-with-text",
-      "blocks": {
-        "8e9a69a9-c63b-4414-a9fb-18f22247fb90": {
-          "type": "heading",
-          "settings": {
-            "heading": "We Believe in Quality",
-            "heading_size": "h1"
-          }
-        },
-        "5a858341-ed20-48b5-824c-cac7e0a346c2": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Ma'at Masonry proudly serves the Greater Seattle, WA area. Our commitment to excellence knows no boundaries within this region. <br\/><\/p><p>Whether you're in Seattle, <br\/>Bellevue, Tacoma, or any surrounding communities, we're here to bring Ma'at's balance to your masonry needs.<\/p>",
-            "text_style": "body"
-          }
-        },
-        "d785fefb-638b-4fc4-88ed-7dc52f7721ce": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": true
-          }
-        }
-      },
-      "block_order": [
-        "8e9a69a9-c63b-4414-a9fb-18f22247fb90",
-        "5a858341-ed20-48b5-824c-cac7e0a346c2",
-        "d785fefb-638b-4fc4-88ed-7dc52f7721ce"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/maat-1.png",
-        "height": "medium",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "accent-1",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 52,
+        "padding_top": 24,
         "padding_bottom": 52,
         "show_section_divider": true,
         "section_number": "2",
-        "section_title": "Reviews"
+        "section_title": "Our Services",
+        "section_id": "our-services"
       }
     },
     "b1646079-4359-45db-9c5b-a6497fd33b11": {
@@ -368,11 +406,63 @@
         "color_scheme": "accent-1",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
-        "padding_top": 52,
+        "padding_top": 100,
         "padding_bottom": 4,
         "show_section_divider": true,
         "section_number": "3",
-        "section_title": "Our Work"
+        "section_title": "Our Work",
+        "section_id": ""
+      }
+    },
+    "e2e4269b-4520-4fa6-a166-1bf72e86ae7d": {
+      "type": "image-with-text",
+      "blocks": {
+        "8e9a69a9-c63b-4414-a9fb-18f22247fb90": {
+          "type": "heading",
+          "settings": {
+            "heading": "We Believe in Quality",
+            "heading_size": "h1"
+          }
+        },
+        "5a858341-ed20-48b5-824c-cac7e0a346c2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ma'at Masonry proudly serves the Greater Seattle, WA area. Our commitment to excellence knows no boundaries within this region. <br\/><\/p><p>Whether you're in Seattle, <br\/>Bellevue, Tacoma, or any surrounding communities, we're here to bring Ma'at's balance to your masonry needs.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "d785fefb-638b-4fc4-88ed-7dc52f7721ce": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "8e9a69a9-c63b-4414-a9fb-18f22247fb90",
+        "5a858341-ed20-48b5-824c-cac7e0a346c2",
+        "d785fefb-638b-4fc4-88ed-7dc52f7721ce"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/maat-1.png",
+        "height": "medium",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "accent-1",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 100,
+        "padding_bottom": 52,
+        "show_section_divider": true,
+        "section_number": "4",
+        "section_title": "Reviews",
+        "section_id": "our-reviews"
       }
     },
     "14cf3e7a-45fd-4bc1-b3fd-4523b3df79b0": {
@@ -381,36 +471,45 @@
         "template--21331398918441__14cf3e7a-45fd-4bc1-b3fd-4523b3df79b0-collapsible_row-1": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "What masonry services does Ma'at Construction offer in Seattle",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p>Ma'at Construction specializes in a wide range of masonry services, including brickwork, stonemasonry, brick restoration, and stone veneer installation. Our expert craftsmen bring Seattle's architectural dreams to life with precision and innovation.<\/p>",
             "page": ""
           }
         },
         "template--21331398918441__14cf3e7a-45fd-4bc1-b3fd-4523b3df79b0-collapsible_row-2": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Is Ma'at Construction experienced in handling residential projects?",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p>Absolutely! Ma'at Construction is well-versed in both residential and commercial projects. Whether it's enhancing the charm of your home or elevating the aesthetics of a commercial space, our team is equipped to deliver excellence.<\/p>",
             "page": ""
           }
         },
         "template--21331398918441__14cf3e7a-45fd-4bc1-b3fd-4523b3df79b0-collapsible_row-3": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "How does Ma'at Construction ensure weather-resistant masonry in Seattle's climate?",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p>Our masonry solutions are designed to withstand Seattle's unique weather conditions. We use materials and techniques that provide durability, ensuring your structure maintains its beauty regardless of rain or shine.<\/p>",
             "page": ""
           }
         },
         "template--21331398918441__14cf3e7a-45fd-4bc1-b3fd-4523b3df79b0-collapsible_row-4": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "Can Ma'at Construction handle brick restoration projects?",
             "icon": "none",
-            "row_content": "",
+            "row_content": "<p>Yes, we specialize in brick restoration. Whether it's repairing damaged bricks or revitalizing the entire facade, our skilled artisans bring a meticulous approach to ensure the restoration complements the original charm.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_LfqDYE": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "How can I request a consultation with Ma'at Construction?",
+            "icon": "none",
+            "row_content": "<p>Initiating a consultation is easy! Simply reach out to us through our contact page or give us a call. Our team will promptly schedule a consultation to discuss your vision and tailor a masonry solution that suits your needs.<\/p>",
             "page": ""
           }
         }
@@ -419,7 +518,8 @@
         "template--21331398918441__14cf3e7a-45fd-4bc1-b3fd-4523b3df79b0-collapsible_row-1",
         "template--21331398918441__14cf3e7a-45fd-4bc1-b3fd-4523b3df79b0-collapsible_row-2",
         "template--21331398918441__14cf3e7a-45fd-4bc1-b3fd-4523b3df79b0-collapsible_row-3",
-        "template--21331398918441__14cf3e7a-45fd-4bc1-b3fd-4523b3df79b0-collapsible_row-4"
+        "template--21331398918441__14cf3e7a-45fd-4bc1-b3fd-4523b3df79b0-collapsible_row-4",
+        "collapsible_row_LfqDYE"
       ],
       "settings": {
         "caption": "",
@@ -479,21 +579,12 @@
         "color_scheme": "accent-1",
         "image_behavior": "none",
         "mobile_content_alignment": "left",
-        "padding_top": 52,
+        "padding_top": 100,
         "padding_bottom": 52,
         "show_section_divider": true,
         "section_number": "2",
-        "section_title": "Reviews"
-      }
-    },
-    "638973b6-6ed5-4f21-bba8-5de8d605c1da": {
-      "type": "contact-form",
-      "settings": {
-        "heading": "Request a Service Today",
-        "heading_size": "h1",
-        "color_scheme": "accent-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "section_title": "Reviews",
+        "section_id": ""
       }
     },
     "bcab121a-1174-4be5-8454-7d7979c6e2aa": {
@@ -502,14 +593,14 @@
         "template--21413851201833__bcab121a-1174-4be5-8454-7d7979c6e2aa-heading-1": {
           "type": "heading",
           "settings": {
-            "heading": "About Us",
+            "heading": "Contact Us",
             "heading_size": "h1"
           }
         },
         "template--21413851201833__bcab121a-1174-4be5-8454-7d7979c6e2aa-text-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Lorem ipsum dolor sit amet, consectetur <br\/>adipiscing elit, sed do eiusmod tempor i<br\/>ncididunt ut labore et dolore magna aliqua.<\/p><p><\/p><p>p. <a href=\"tel:+1.555.234.2345\" title=\"tel:+1.555.234.2345\">+1.555.234.2345<br\/><\/a>e. <a href=\"mailto:info@maatmasonry.com\" title=\"mailto:info@maatmasonry.com\">info@maatmasonry.com<\/a><br\/><\/p>"
+            "text": "<p>Discover the Ma'at Construction difference. Your vision, our expertise – building Seattle's tomorrow, today.<\/p><p><\/p><p>p. <a href=\"tel:+1.555.234.2345\" title=\"tel:+1.555.234.2345\">+1.555.234.2345<br\/><\/a>e. <a href=\"mailto:info@maatmasonry.com\" title=\"mailto:info@maatmasonry.com\">info@maatmasonry.com<\/a><br\/><\/p>"
           }
         }
       },
@@ -526,7 +617,18 @@
         "padding_bottom": 52,
         "show_section_divider": false,
         "section_number": "",
-        "section_title": ""
+        "section_title": "",
+        "section_id": ""
+      }
+    },
+    "638973b6-6ed5-4f21-bba8-5de8d605c1da": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "color_scheme": "accent-1",
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "8fd5103c-315d-4849-94b3-b32dc33696e5": {
@@ -575,7 +677,8 @@
         "padding_bottom": 36,
         "show_section_divider": false,
         "section_number": "",
-        "section_title": ""
+        "section_title": "",
+        "section_id": ""
       }
     }
   },
@@ -586,12 +689,12 @@
     "ff1f791b-ff43-4c64-a3c3-dfe570becb76",
     "featured_collection",
     "928abd77-6a89-43a0-b17c-a15dcc163862",
-    "e2e4269b-4520-4fa6-a166-1bf72e86ae7d",
     "b1646079-4359-45db-9c5b-a6497fd33b11",
+    "e2e4269b-4520-4fa6-a166-1bf72e86ae7d",
     "14cf3e7a-45fd-4bc1-b3fd-4523b3df79b0",
     "5ee4978d-f644-468f-80e7-b4d2229851bf",
-    "638973b6-6ed5-4f21-bba8-5de8d605c1da",
     "bcab121a-1174-4be5-8454-7d7979c6e2aa",
+    "638973b6-6ed5-4f21-bba8-5de8d605c1da",
     "8fd5103c-315d-4849-94b3-b32dc33696e5"
   ]
 }

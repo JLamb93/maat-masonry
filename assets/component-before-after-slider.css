@@ -483,6 +483,7 @@
   align-items:center;
   z-index:5;
   top:0;
+  border-radius:5px;
   left:50%;
   height:100%;
   width:4px;
@@ -494,7 +495,7 @@
 
 #resizer:after {
   background:linear-gradient(62deg,#000 85%, #be8940);
-  font-family: san-serif;
+  font-family: system-ui;
   content:'< >';
   font-weight:900;
   font-size:12px;

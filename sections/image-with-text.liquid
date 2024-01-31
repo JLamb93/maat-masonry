@@ -16,7 +16,7 @@
 
 {% assign scheme1 = settings.color_schemes | first %}
 
-<div class="image-with-text image-with-text--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == scheme1 and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
+<div id="{{ section.settings.section_id}}" class="image-with-text image-with-text--{{ section.settings.content_layout }} page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == scheme1 and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
   {% if section.settings.show_section_divider %}
     <div class="section-divider__container scroll-trigger animate--slide-in">
       <span class="section-number">{{ section.settings.section_number }}</span>
@@ -328,6 +328,11 @@
       "type": "text",
       "id": "section_title",
       "label": "Section title"
+    },
+    {
+      "type": "text",
+      "id": "section_id",
+      "label": "Section ID"
     }
   ],
   "blocks": [

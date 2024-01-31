@@ -54,6 +54,9 @@
     data-slides-per-scroll="1"
     data-slides-per-view="1"
     data-show-pagination="{clickable: true, el: '.swiper-pagination',}"
+    data-effect="fade"
+    data-mobile-only="3000"
+    data-nav-enabled="false"
     {% if family.products.size > 4 %}
     data-centered="true"
     data-centered-bounds="true"
@@ -62,15 +65,15 @@
     <div class="swiper-wrapper w-full" style="height: 648px !important;">
       {%- if section.settings.image != blank -%}
         <div class="swiper-slide">
-          <div class="slider__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} slider__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+          <div class="slider__media media{% if section.settings.image == blank and section.settings.image_1 == blank %} placeholder{% endif %}{% if section.settings.image_1 != blank %} slider__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
             {%- liquid
               assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio
-              if section.settings.image_2 != blank
+              if section.settings.image_1 != blank
                 assign image_class = 'slider__media-image-half'
               endif
-              if section.settings.image_2 != blank and section.settings.stack_images_on_mobile
+              if section.settings.image_1 != blank and section.settings.stack_images_on_mobile
                 assign sizes = stacked_sizes
-              elsif section.settings.image_2 != blank
+              elsif section.settings.image_1 != blank
                 assign sizes = half_width
               else
                 assign sizes = full_width
@@ -124,21 +127,91 @@
           </div>
         </div>
       {%- endif -%}
+      {%- if section.settings.image_3 != blank -%}
+        <div class="swiper-slide">
+          <div class="slider__media media{% if section.settings.image != blank %} slider__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+            {%- liquid
+              assign image_height_2 = section.settings.image_3.width | divided_by: section.settings.image_3.aspect_ratio
+              if section.settings.image != blank
+                assign image_class_2 = 'slider__media-image-half'
+              endif
+              if section.settings.image != blank and section.settings.stack_images_on_mobile
+                assign sizes = stacked_sizes
+              elsif section.settings.image_3 != blank
+                assign sizes = half_width
+              else
+                assign sizes = full_width
+              endif
+            -%}
+            {{
+               section.settings.image_3
+             | image_url: width: 3840
+             | image_tag:
+             loading: 'lazy',
+             width: section.settings.image_3.width,
+             height: image_height_3,
+             class: image_class_3,
+             sizes: sizes,
+             widths: widths }}
+          </div>
+        </div>
+      {%- endif -%}
+      {%- if section.settings.image_4 != blank -%}
+        <div class="swiper-slide">
+          <div class="slider__media media{% if section.settings.image != blank %} slider__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+            {%- liquid
+              assign image_height_2 = section.settings.image_4.width | divided_by: section.settings.image_4.aspect_ratio
+              if section.settings.image != blank
+                assign image_class_2 = 'slider__media-image-half'
+              endif
+              if section.settings.image != blank and section.settings.stack_images_on_mobile
+                assign sizes = stacked_sizes
+              elsif section.settings.image_4 != blank
+                assign sizes = half_width
+              else
+                assign sizes = full_width
+              endif
+            -%}
+            {{
+               section.settings.image_4
+             | image_url: width: 3840
+             | image_tag:
+             loading: 'lazy',
+             width: section.settings.image_4.width,
+             height: image_height_4,
+             class: image_class_4,
+             sizes: sizes,
+             widths: widths }}
+          </div>
+        </div>
+      {%- endif -%}
     </div>
   </swiper-carousel>
-  <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-    <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
+  <swiper-carousel
+    data-initial-slide="{{ index | minus: 1 }}"
+    data-space-between="0"
+    data-slides-per-scroll="1"
+    data-slides-per-view="1"
+    data-show-pagination="{clickable: true, el: '.swiper-pagination',}"
+    data-effect="fade"
+    data-mobile-only="3000"
+    data-nav-enabled="false"
+    {% if family.products.size > 4 %}
+    data-centered="true"
+    data-centered-bounds="true"
+    {% endif %}
+    class="w-full h-full opacity-0 transition-base relative overflow-hidden px-1 swiper">
+    <div class="swiper-wrapper w-full">
       {%- for block in section.blocks -%}
-        {%- case block.type -%}
-          {%- when 'heading' -%}
+      <div class="swiper-slide banner__box-text">
+        <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
+        
           <h2 class="banner__heading inline-richtext {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
             {{ block.settings.heading }}
           </h2>
-          {%- when 'text' -%}
           <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
             <p>{{ block.settings.text }}</p>
           </div>
-          {%- when 'buttons' -%}
           <div class="banner__buttons{% if block.settings.button_label_1 != blank and block.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}" {{ block.shopify_attributes }}>
             {%- if block.settings.button_label_1 != blank -%}
               <a
@@ -165,11 +238,12 @@
               </a>
             {%- endif -%}
           </div>
-        {%- endcase -%}
+        </div>
+      </div>
       {%- endfor -%}
     </div>
-  </div>
-</div>
+  </swiper-carousel>
+
 
 {% schema %}
   {
@@ -189,6 +263,16 @@
         "type": "image_picker",
         "id": "image_2",
         "label": "t:sections.image-banner.settings.image_2.label"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_3",
+        "label": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_4",
+        "label": "Image"
       },
       {
         "type": "range",
@@ -343,9 +427,9 @@
     ],
     "blocks": [
       {
-        "type": "heading",
-        "name": "t:sections.image-banner.blocks.heading.name",
-        "limit": 1,
+        "type": "slide_text",
+        "name": "Slide Text",
+        "limit": 10,
         "settings": [
           {
             "type": "inline_richtext",
@@ -369,13 +453,7 @@
             ],
             "default": "h1",
             "label": "t:sections.all.heading_size.label"
-          }
-        ]
-      }, {
-        "type": "text",
-        "name": "t:sections.image-banner.blocks.text.name",
-        "limit": 1,
-        "settings": [
+          },
           {
             "type": "inline_richtext",
             "id": "text",
@@ -398,13 +476,7 @@
             ],
             "default": "body",
             "label": "t:sections.image-banner.blocks.text.settings.text_style.label"
-          }
-        ]
-      }, {
-        "type": "buttons",
-        "name": "t:sections.image-banner.blocks.buttons.name",
-        "limit": 1,
-        "settings": [
+          },
           {
             "type": "text",
             "id": "button_label_1",
@@ -447,11 +519,7 @@
         "name": "t:sections.image-banner.presets.name",
         "blocks": [
           {
-            "type": "heading"
-          }, {
-            "type": "text"
-          }, {
-            "type": "buttons"
+            "type": "slide_text"
           }
         ]
       }

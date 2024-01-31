@@ -16,9 +16,9 @@
 
 {% assign scheme1 = settings.color_schemes | first %}
 
-<div class="page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == scheme1 and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
+<div class="page-width isolate{% if settings.text_boxes_border_thickness > 0 and settings.text_boxes_border_opacity > 0 and settings.media_border_thickness > 0 and settings.media_border_opacity > 0 %} collapse-borders{% endif %}{% unless section.settings.color_scheme == scheme1 and settings.media_border_thickness > 0 and settings.text_boxes_shadow_opacity == 0 and settings.text_boxes_border_thickness == 0 or settings.text_boxes_border_opacity == 0 %} collapse-corners{% endunless %} section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}" id="{{ section.settings.section_id}}">
   {% if section.settings.show_section_divider %}
-    <div class="section-divider__container scroll-trigger animate--slide-in">
+    <div class="section-divider__container scroll-trigger animate--slide-in" >
       <span class="section-number">{{ section.settings.section_number }}</span>
       <div class="" style="width:calc(100% - 50px);">
         <hr class="solid section-divider">
@@ -28,57 +28,59 @@
     </div>
   {% endif %}
   <div class="container {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" id="before-after-slider" >
-    <div id="before-image">
-      {%- if section.settings.before_image != blank -%}
-        {%- if section.settings.image_behavior == 'ambient' or section.settings.image_behavior == 'zoom-in' -%}
-          {%- assign widths = '198, 432, 642, 900, 1284, 1800' -%}
-          {%- capture sizes -%}
-            (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 1.6667 }}px,
-            (min-width: 750px) calc((100vw - 130px) / 1.667), calc((100vw - 50px) / 1.667)
-          {%- endcapture -%}
+    <before-after>
+      <div id="before-image">
+        {%- if section.settings.before_image != blank -%}
+          {%- if section.settings.image_behavior == 'ambient' or section.settings.image_behavior == 'zoom-in' -%}
+            {%- assign widths = '198, 432, 642, 900, 1284, 1800' -%}
+            {%- capture sizes -%}
+              (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 1.6667 }}px,
+              (min-width: 750px) calc((100vw - 130px) / 1.667), calc((100vw - 50px) / 1.667)
+            {%- endcapture -%}
+          {%- else -%}
+            {%- assign widths = '165, 360, 535, 750, 1070, 1500' -%}
+            {%- capture sizes -%}
+              (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
+              (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
+            {%- endcapture -%}
+          {%- endif -%}
+          {{
+            section.settings.before_image
+            | image_url: width: 1500
+            | image_tag: loading: 'lazy', sizes: sizes, widths: widths
+          }}
         {%- else -%}
-          {%- assign widths = '165, 360, 535, 750, 1070, 1500' -%}
-          {%- capture sizes -%}
-            (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
-            (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
-          {%- endcapture -%}
+          {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
         {%- endif -%}
-        {{
-          section.settings.before_image
-          | image_url: width: 1500
-          | image_tag: loading: 'lazy', sizes: sizes, widths: widths
-        }}
-      {%- else -%}
-        {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
-      {%- endif -%}
-    </div>
+      </div>
 
-    <div id="after-image">
-      {%- if section.settings.after_image != blank -%}
-        {%- if section.settings.image_behavior == 'ambient' or section.settings.image_behavior == 'zoom-in' -%}
-          {%- assign widths = '198, 432, 642, 900, 1284, 1800' -%}
-          {%- capture sizes -%}
-            (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 1.6667 }}px,
-            (min-width: 750px) calc((100vw - 130px) / 1.667), calc((100vw - 50px) / 1.667)
-          {%- endcapture -%}
+      <div id="after-image">
+        {%- if section.settings.after_image != blank -%}
+          {%- if section.settings.image_behavior == 'ambient' or section.settings.image_behavior == 'zoom-in' -%}
+            {%- assign widths = '198, 432, 642, 900, 1284, 1800' -%}
+            {%- capture sizes -%}
+              (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 1.6667 }}px,
+              (min-width: 750px) calc((100vw - 130px) / 1.667), calc((100vw - 50px) / 1.667)
+            {%- endcapture -%}
+          {%- else -%}
+            {%- assign widths = '165, 360, 535, 750, 1070, 1500' -%}
+            {%- capture sizes -%}
+              (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
+              (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
+            {%- endcapture -%}
+          {%- endif -%}
+          {{
+            section.settings.after_image
+            | image_url: width: 1500
+            | image_tag: loading: 'lazy', sizes: sizes, widths: widths
+          }}
         {%- else -%}
-          {%- assign widths = '165, 360, 535, 750, 1070, 1500' -%}
-          {%- capture sizes -%}
-            (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | divided_by: 2 }}px,
-            (min-width: 750px) calc((100vw - 130px) / 2), calc((100vw - 50px) / 2)
-          {%- endcapture -%}
+          {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
         {%- endif -%}
-        {{
-          section.settings.after_image
-          | image_url: width: 1500
-          | image_tag: loading: 'lazy', sizes: sizes, widths: widths
-        }}
-      {%- else -%}
-        {{ 'detailed-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
-      {%- endif -%}
-    </div>
+      </div>
 
-    <div id="resizer"></div>
+      <div id="resizer"></div>
+    </before-after>
 
   </div>
 </div>
@@ -132,100 +134,11 @@
   </div>
 </div>
 
-{% javascript %}
-const slider = document.getElementById('before-after-slider');
-const before = document.getElementById('before-image');
-const beforeImage = before.getElementsByTagName('img')[0];
-const resizer = document.getElementById('resizer');
+<script
+      src="{{ 'before-after.js' | asset_url }}"
+      async
+      defer="defer"></script>
 
-let active = false;
-
-//Sort overflow out for Overlay Image
-document.addEventListener("DOMContentLoaded", function() {
-  let width = slider.offsetWidth;
-  console.log(width);
-  beforeImage.style.width = width + 'px';
-});
-
-//Adjust width of image on resize 
-window.addEventListener('resize', function() {
-  let width = slider.offsetWidth - 25;
-  console.log(width);
-  beforeImage.style.width = width + 'px';
-})
-
-resizer.addEventListener('mousedown',function(){
-  active = true;
- resizer.classList.add('resize');
-
-});
-
-document.body.addEventListener('mouseup',function(){
-  active = false;
- resizer.classList.remove('resize');
-});
-
-document.body.addEventListener('mouseleave', function() {
-  active = false;
-  resizer.classList.remove('resize');
-});
-
-document.body.addEventListener('mousemove',function(e){
-  if (!active) return;
-  let x = e.pageX;
-  x -= slider.getBoundingClientRect().left - 25;
-  slideIt(x);
-  pauseEvent(e);
-});
-
-resizer.addEventListener('touchstart',function(){
-  active = true;
-  resizer.classList.add('resize');
-});
-
-document.body.addEventListener('touchend',function(){
-  active = false;
-  resizer.classList.remove('resize');
-});
-
-document.body.addEventListener('touchcancel',function(){
-  active = false;
-  resizer.classList.remove('resize');
-});
-
-//calculation for dragging on touch devices
-document.body.addEventListener('touchmove',function(e){
-  if (!active) return;
-  let x;
-  
-  let i;
-  for (i=0; i < e.changedTouches.length; i++) {
-  x = e.changedTouches[i].pageX; 
-  }
-  
-  x -= slider.getBoundingClientRect().left;
-  slideIt(x);
-  pauseEvent(e);
-});
-
-function slideIt(x){
-    let transform = Math.max(25,(Math.min(x,slider.offsetWidth - 25)));
-    before.style.width = transform-0+"px";
-    resizer.style.left = transform+25+"px";
-    
-}
-
-//stop divs being selected.
-function pauseEvent(e){
-    if(e.stopPropagation) e.stopPropagation();
-    if(e.preventDefault) e.preventDefault();
-    e.cancelBubble=true;
-    e.returnValue=false;
-    return false;
-}
-
-
-{% endjavascript %}
 
 {% schema %}
 {
@@ -456,6 +369,11 @@ function pauseEvent(e){
       "type": "text",
       "id": "section_title",
       "label": "Section title"
+    },
+    {
+      "type": "text",
+      "id": "section_id",
+      "label": "Section ID"
     }
   ],
   "blocks": [
