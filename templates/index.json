@@ -284,7 +284,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Photo_Oct_15_2022_6_07_12_PM.jpg",
             "heading": "Retaining Walls",
-            "heading_size": "h2"
+            "heading_size": "h2",
+            "copy": "Elevate your space with Ma'at Construction's expert masonry. Seamless installations, lasting beauty, and Pacific Northwest resilience."
           }
         },
         "service_TWHikq": {
@@ -292,7 +293,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/paver.jpg",
             "heading": "Pavers",
-            "heading_size": "h2"
+            "heading_size": "h2",
+            "copy": "Talk about your service"
           }
         },
         "service_pbzL9n": {
@@ -300,7 +302,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/maat-steps.jpg",
             "heading": "Steps",
-            "heading_size": "h2"
+            "heading_size": "h2",
+            "copy": "Talk about your service"
           }
         },
         "service_nUU4qq": {
@@ -308,7 +311,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/maat-tiles.jpg",
             "heading": "Tiles",
-            "heading_size": "h2"
+            "heading_size": "h2",
+            "copy": "Talk about your service"
           }
         },
         "service_DjYzHQ": {
@@ -316,7 +320,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/maat-stone.jpg",
             "heading": "Stone",
-            "heading_size": "h2"
+            "heading_size": "h2",
+            "copy": "Talk about your service"
           }
         },
         "service_hNj79p": {
@@ -324,7 +329,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/Photo_Oct_15_2022_6_07_12_PM.jpg",
             "heading": "Retaining Walls",
-            "heading_size": "h2"
+            "heading_size": "h2",
+            "copy": "Talk about your service"
           }
         },
         "button_WkeqXq": {
@@ -532,8 +538,12 @@
         "open_first_collapsible_row": false,
         "image_ratio": "adapt",
         "desktop_layout": "image_second",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 100,
+        "padding_bottom": 0,
+        "show_section_divider": true,
+        "section_number": "5",
+        "section_title": "Frequently Asked",
+        "section_id": "faqs"
       }
     },
     "5ee4978d-f644-468f-80e7-b4d2229851bf": {

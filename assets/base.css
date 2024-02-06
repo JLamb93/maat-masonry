@@ -643,13 +643,18 @@ h6:empty {
   background:rgba(190, 137, 64, 1)!important;
 }
 :not(nav) > ul:not(.list-unstyled) li, .services__heading{
-  display:flex;
+  display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  max-width: calc(100% - 30px);
   text-align: left;
   align-items: flex-start;
-  margin-bottom:25px;
+  margin-top: 0;
+  margin-bottom: 0;
   transition: .5s ease-in-out all;
+  position: relative;
+  background: #000;
+  padding: 15px;
 }
 :not(nav) > ul:not(.list-unstyled) li:after, .services__heading:after{
   content: "→";
@@ -659,11 +664,16 @@ h6:empty {
   transition: .5s ease-in-out all;
 }
 :not(nav) > ul:not(.list-unstyled) li:hover, .services__heading:hover{
-  margin-left:25px;
   transition: .5s ease-in-out all;
 }
 :not(nav) > ul:not(.list-unstyled) li:hover:after, .services__heading:hover:after{
   transform:scale(1.25);
+  padding-right: 25px;
+  transition: .5s ease-in-out all;
+}
+:not(nav) > ul:not(.list-unstyled) li:hover:after, .service:hover > .services__heading:after{
+  transform:scale(1.25);
+  padding-right: 25px;
   transition: .5s ease-in-out all;
 }
 :not(nav) > ul:not(.list-unstyled) li a{

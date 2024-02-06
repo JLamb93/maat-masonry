@@ -5,12 +5,16 @@
     flex-wrap: wrap;
     padding: 75px 0px 50px;
 }
+.service{
+    overflow: hidden;
+}
+
 .services__wrapper.services__wrapper--center.page-width{
     padding:0px;
 }
 .service-carousel:not(.swiper-initialized) .service{
     max-width: calc(25% - 30px);
-    padding:15px;
+    margin:15px;
 }
 .services__blocks swiper-carousel{
     padding:0 100px;
@@ -23,6 +27,31 @@
 }
 .service .image-with-text__media{
     max-height:220px;
+}
+.service-hover-text{
+    width: calc(100% - 20px);
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 100%;
+    margin: 0px;
+    padding: 10px;
+    background: rgba(0,0,0,.5);
+    color: rgba(255,255,255,1);
+    background-size:800px 800px; 
+    background-position:0px 0px;  
+    /* display: none; */
+    transition: all .5s ease-in-out;
+    -moz-transition: all .4s;
+}
+.service:hover .service-hover-text {
+	display: block !important;
+    background: rgba(0,0,0,.5);
+    background-position:400px 400px;  
+	left: 0px;
+	top: 0px;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .4s;
 }
 .service-carousel.swiper-initialized{
 

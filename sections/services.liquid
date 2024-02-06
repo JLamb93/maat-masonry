@@ -121,7 +121,7 @@
           {%- for block in section.blocks -%}
             {%- case block.type -%}
               {%-when 'service'%}
-                <div class="service swiper-slide">
+                <div class="service swiper-slide" {{ block.shopify_attributes }}>
                 <div class="image-with-text__media-item image-with-text__media-item--medium image-with-text__media-item--top grid__item">
                   <div
                     class="image-with-text__media image-with-text__media--medium global-media-settings media"
@@ -153,10 +153,14 @@
                     {%- endif -%}
                   </div>
                 </div>
+                <div class="service-hover-text">
+                  {%- if block.settings.copy -%}
+                    <p>{{ block.settings.copy }}</p>
+                  {%- endif -%}
+                </div>
                 
                 <h2
                   class="services__heading inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                  {{ block.shopify_attributes }}
                   {% if settings.animations_reveal_on_scroll %}
                     data-cascade
                     style="--animation-order: {{ forloop.index }};"
@@ -331,6 +335,12 @@
           ],
           "default": "h1",
           "label": "t:sections.all.heading_size.label"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "copy",
+          "default": "Talk about your service",
+          "label": "Service Copy"
         }
       ]
     },
